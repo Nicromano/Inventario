@@ -1,0 +1,10 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+.formulario{
+    padding: 5vh;
+    border: 1px #dce0e8 solid;
+    margin-top: 50%;
+}
