@@ -4,16 +4,17 @@
 if($base == null){
     exit;
 }
+global $usuario;
+global $pass;
+$usuario = $_POST['user'];
+$pass = $_POST['contra'];
 
-global $usuario =  $_POST['user'];
-global $pass = $_POST['contra'];
-
-/*if(isset($_POST['user'], $_POST['contra'])){
+if(!isset($usuario, $pass)){
     echo"no definidas";
-    exit;
-}*/
-echo $usuario.$pass;
-$sql = "SELECT * FROM personal WHERE usuario = ".$usuario." AND contraseña = ".$pass;
+    
+}
+
+$sql = "SELECT * FROM personal WHERE usuario = '".$usuario."' AND contrasenia = '".$pass."'";
 if(!$sentencia = $base->query($sql)){
     echo "Error: ". $base->error;
 }
@@ -24,20 +25,19 @@ if(!$sentencia = $base->query($sql)){
 
 //$sentencia->execute();
 if(!$sentencia){
-   
+   echo "error";
 }else{
-$fila = $sentencia->fetch_assoc();
-
-echo $fila['usuario']. $fila['contraseña'];
+    
+    while ($fila = $sentencia->fetch_assoc()) {
+        echo $fila['usuario'];
+        echo "-----";
+        echo $fila['contraseña'];
+    }
 }
 
 
 /*
-while ($fila = $sentencia->fetch_assoc()) {
-echo $fila['usuario'];
-echo "-----";
-echo $fila['contraseña'];
-}*/
+*/
 
 /*echo "<br> ".$fila['usuario']."---- ".$fila['codigo'];
 
