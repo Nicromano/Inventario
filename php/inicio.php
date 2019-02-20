@@ -4,8 +4,8 @@
 if($base == null){
     exit;
 }
-$usuario =real_escape_string( $_POST['usuario']);
-$pass = real_escape_string($_POST['pass']);
+$usuario = $base->real_escape_string( $_POST['usuario']);
+$pass = $base->real_escape_string($_POST['pass']);
 
 $base->query("SELECT * FROM personal WHERE usuario = $usuario AND contraseña = $pass");
 $sentencia= $base->use_result();
