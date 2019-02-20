@@ -1,0 +1,59 @@
+commit d1b73efffe454062bf7095bae14c34883cd9d5bf
+Author: Nicromano <ljose297@gmail.com>
+Date:   Wed Feb 20 15:03:18 2019 -0500
+
+    elimina if innecesario
+
+commit f0f17dab81d20068d7ae21d05412da71c9ef6097
+Author: Nicromano <ljose297@gmail.com>
+Date:   Wed Feb 20 00:02:39 2019 -0500
+
+    session start
+
+commit 4c22c6b315d4f905d3d6cc92dbc672fa47f12425
+Author: Nicromano <ljose297@gmail.com>
+Date:   Tue Feb 19 23:59:24 2019 -0500
+
+    Problema de login solucionado
+
+commit 0e51f86977f7b664f800ef0a262faaf685e8abd7
+Author: Nicromano <ljose297@gmail.com>
+Date:   Tue Feb 19 23:29:13 2019 -0500
+
+    variables post no definidas
+
+commit a8b9cd778f5e60e0ba2cf43fc7f515cc5781f6f7
+Author: Nicromano <ljose297@gmail.com>
+Date:   Tue Feb 19 22:10:30 2019 -0500
+
+    corrige real escape
+
+commit 42785af647ef7167ecab9fd9e6182732b8378fe6
+Author: Nicromano <ljose297@gmail.com>
+Date:   Tue Feb 19 22:07:54 2019 -0500
+
+    real esape string
+
+commit fa7495d2e7f488ce89a0f2e12aa7d5db83ec0d27
+Author: Nicromano <ljose297@gmail.com>
+Date:   Tue Feb 19 14:11:05 2019 -0500
+
+    js delete
+
+commit 003690fac753e6c71d94ef9d195a8323c29a45b6
+Author: Nicromano <ljose297@gmail.com>
+Date:   Tue Feb 19 14:10:32 2019 -0500
+
+    css delete
+
+commit 9d752a3d386a3636d7dbfae1387c1281d845a1f8
+Author: Nicromano <ljose297@gmail.com>
+Date:   Tue Feb 19 14:05:01 2019 -0500
+
+    COMMIT
+
+commit 3d86d62b09d1585db3e1b557c3b25dc1fbfeea31
+Author: Nicromano <40124504+Nicromano@users.noreply.github.com>
+Date:   Tue Feb 19 13:03:28 2019 -0500
+
+    Initial commit
