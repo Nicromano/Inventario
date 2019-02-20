@@ -24,30 +24,31 @@ if(!$sentencia = $base->query($sql)){
 //echo $sql;
 
 //$sentencia->execute();
-if(!$sentencia){
-   echo "error";
-}else{
-    
-    while ($fila = $sentencia->fetch_assoc()) {
-        echo $fila['usuario'];
-        echo "-----";
-        echo $fila['contraseña'];
-    }
+if($sentencia){
+   //No hay error
+   $fila = $sentencia->num_rows;
+   if($fila != 0){
+       echo "Usuario registrado ";
+    session_start();
+    $_SESSION['usuario'] = $fila['usuario'];
+    $_SESSION['codigo'] = $fila['id'];
+    $_SESSION['cargo'] = $fila['cargo'];
+    //header('Location: ../sistema.html');
+   }
 }
 
 
-/*
+/*while ($fila = $sentencia->fetch_assoc()) {
+        echo $fila['usuario'];
+        echo "-----";
+        echo $fila['contrasenia'];
+    }
 */
 
 /*echo "<br> ".$fila['usuario']."---- ".$fila['codigo'];
 
 if($fila['usuario']== $usuario && $fila['contraseña']== $pass){
-    echo "Usuario registrado ";
-    session_start();
-    $_SESSION['usuario'] = $fila['usuario'];
-    $_SESSION['codigo'] = $fila['codigo'];
-    $_SESSION['cargo'] = $fila['cargo'];
-    //header('Location: ../sistema.html');
+    
 }
 else{
     //header('Location: ../index.html');
