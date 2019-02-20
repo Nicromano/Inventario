@@ -4,18 +4,27 @@
 if($base == null){
     exit;
 }
-$usuario = $base->real_escape_string( $_POST['usuario']);
-$pass = $base->real_escape_string($_POST['pass']);
 
-$base->query("SELECT * FROM personal WHERE usuario = $usuario AND contraseña = $pass");
-$sentencia= $base->use_result();
+global $usuario =  $_POST['user'];
+global $pass = $_POST['contra'];
+
+/*if(isset($_POST['user'], $_POST['contra'])){
+    echo"no definidas";
+    exit;
+}*/
+echo $usuario.$pass;
+$sql = "SELECT * FROM personal WHERE usuario = ".$usuario." AND contraseña = ".$pass;
+if(!$sentencia = $base->query($sql)){
+    echo "Error: ". $base->error;
+}
+
 //$sentencia->bindParam(":user", $usuario, PDO::PARAM_STR);
 //$sentencia->bindParam(":contra", $pass, PDO::PARAM_STR);
 //echo $sql;
 
 //$sentencia->execute();
 if(!$sentencia){
-    echo "no almacena";
+   
 }else{
 $fila = $sentencia->fetch_assoc();
 
